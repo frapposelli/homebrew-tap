@@ -2,21 +2,20 @@
 class Wwhrd < Formula
   desc "Have Henry Rollins check vendored licenses in your Go project."
   homepage "https://github.com/frapposelli/wwhrd/blob/master/README.md"
-  version "0.3.0"
+  version "0.3.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/frapposelli/wwhrd/releases/download/v0.3.0/wwhrd_0.3.0_darwin_amd64.tar.gz"
-    sha256 "b91947c6d9f94ef54b46b780f0bd5f5f61dc668d813cb48e136152107c93be58"
-  elsif OS.linux?
-    if Hardware::CPU.intel?
-      url "https://github.com/frapposelli/wwhrd/releases/download/v0.3.0/wwhrd_0.3.0_linux_amd64.tar.gz"
-      sha256 "0717c24b3a380e3266a0cbde96e1f47633f80fdb9cb7e4d9ad5d047259cec1e5"
-    end
+    url "https://github.com/frapposelli/wwhrd/releases/download/v0.3.1/wwhrd_0.3.1_darwin_amd64.tar.gz"
+    sha256 "7af578346b1eacc071b46248ffe2963fa767c61020bae08a6014ece300baf0b9"
+  end
+  if OS.linux? && Hardware::CPU.intel?
+    url "https://github.com/frapposelli/wwhrd/releases/download/v0.3.1/wwhrd_0.3.1_linux_amd64.tar.gz"
+    sha256 "92a3109ad7c14927516f5c3acf0687a252b4c40d37bac6e323771f79f37c48c7"
   end
 
   def install
-    bin.install "wwhrd"
+    bin.install "program"
   end
 
   test do
