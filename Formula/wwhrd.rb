@@ -2,16 +2,16 @@
 class Wwhrd < Formula
   desc "Have Henry Rollins check vendored licenses in your Go project."
   homepage "https://github.com/frapposelli/wwhrd/blob/master/README.md"
-  version "0.3.2"
+  version "0.4.0-rc.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/frapposelli/wwhrd/releases/download/v0.3.2/wwhrd_0.3.2_darwin_amd64.tar.gz"
-    sha256 "6ff2ce30e0d15a5e6be3dcba36153ebfba7346e22a2f4c5273bc6d94e63ec69a"
+    url "https://github.com/frapposelli/wwhrd/releases/download/v0.4.0-rc.0/wwhrd_0.4.0-rc.0_darwin_amd64.tar.gz"
+    sha256 "25113beafb12989f6b954af661b05f3029c3ba4d42e915a9ecbbf661d7951c25"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/frapposelli/wwhrd/releases/download/v0.3.2/wwhrd_0.3.2_linux_amd64.tar.gz"
-    sha256 "8d211e70b0e75bf129a9c2077886c7f58b040fcfdd15ca978e9c985116c75eb2"
+    url "https://github.com/frapposelli/wwhrd/releases/download/v0.4.0-rc.0/wwhrd_0.4.0-rc.0_linux_amd64.tar.gz"
+    sha256 "4ac59d01ac56745608d0448c188f4f34d836f0ae755cb467b95c1bc5b537f32c"
   end
 
   def install
