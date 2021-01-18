@@ -15,7 +15,7 @@ class Wwhrd < Formula
   end
 
   def install
-    bin.install "program"
+    bin.install "wwhrd"
   end
 
   test do
