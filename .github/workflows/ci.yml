@@ -1,0 +1,31 @@
+name: ci
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+jobs:
+  ci:
+    name: ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-10.15, macos-11.0]
+    steps:
+    - name: Set up Homebrew
+      id: set-up-homebrew
+      uses: Homebrew/actions/setup-homebrew@master
+    - name: Check out code
+      uses: actions/checkout@v1
+    - name: Update Homebrew
+      run: |
+        brew update >/dev/null
+    - name: Homebrew audit/install/test
+      run: |
+        brew audit ./Formula/*.rb
+        brew install -v ./Formula/*.rb
+        brew test ./Formula/*.rb
+
+
