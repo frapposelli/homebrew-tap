@@ -24,7 +24,7 @@ jobs:
         brew update >/dev/null
     - name: Homebrew audit/install/test
       run: |
-        brew audit ./Formula/*.rb
+        brew style ./Formula/*.rb
         brew install -v ./Formula/*.rb
         brew test ./Formula/*.rb
 
